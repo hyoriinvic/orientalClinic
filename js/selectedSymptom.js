@@ -1,3 +1,13 @@
+/*  증상 선택 버튼의 구조: 
+<div>
+  <input type="checkbox" class="btns" id="something">
+  <label class="btn1" for="something">증상명</label>
+</div>
+
+해당 구조에서 input tag의 property 를 기준으로 함수 작성
+class = "btns"
+*/
+
 function isChecked() {
   let btns = document.getElementsByClassName("btns");
   console.log(btns); // 클래스명이 btn1인 elements 배열
