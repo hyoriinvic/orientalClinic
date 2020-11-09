@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="css/sympton2/sympton2.css" />
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script language="javascript">
+<!-- 접수 완료  팝업 : 사용 X 
+        <script language="javascript">
         function btn_alert(){
             alert("접수가 완료되었습니다.")
             // location.href='http://127.0.0.1/main.php' /* 클릭 시 맨 처음 페이지로 이동*/
         }</script>
+-->
 </head>
 
 <body>
@@ -140,7 +142,7 @@
             <input type="checkbox" class="btns" id="else">
             <label class="btn" for="else">기타</label>
         </section>
-        <button class="btn submitInfo" type="button" onclick="isChecked(); btn_alert();">접수하기</button>
+        <button class="btn submitInfo" type="button" onclick="isChecked();">접수하기</button>
     </form>
     <script type="text/javascript" src="./js/selectedSymptom.js"></script>
 </body>
