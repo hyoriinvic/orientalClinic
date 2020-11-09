@@ -25,7 +25,8 @@
         <div><input class="info" id="join_recommendPatient" name="join_recommendPatient" placeholder="소개환자(선택)" type="text" /></div>
     </form>
 
-    <!-- <button class="btn" id="submitInfo" type="button"
+    <!-- 페이지 이동 기능 잠깐 제외
+        <button class="btn" id="submitInfo" type="button"
         onclick="location.href='http://127.0.0.1/sympton1.php'">증상 입력하기</button> -->
     <button class="btn" id="submitInfo" type="button" onclick="AjaxCall();">증상 입력하기</button>
 
