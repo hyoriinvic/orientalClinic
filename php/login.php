@@ -16,7 +16,7 @@ $user = "root";
 $password = "orientalclinic123";
 $dbName = "oriental";
 $mysqli = mysqli_connect($hostName, $user, $password);
-// $db_handle = mysqli_select_db($mysqli, $dbName);
+$db_handle = mysqli_select_db($mysqli, $dbName);
 
 $join_patientName = $_POST['join_patientName'];
 $join_patientPhone = $_POST['join_patientPhone'];
