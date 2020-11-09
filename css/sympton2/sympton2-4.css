@@ -1,0 +1,33 @@
+/*---------------------------------------------------------------------------------------*/
+
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label {
+	background-color: rgba(157, 28, 32, 0.75);
+}
+
+label{
+    display: flex; /* 라벨 내 text 중앙 정렬을 위해 flex box로 설정을 바꿈 */
+    align-items: center;
+    justify-content: center;
+}
+
+/* 신체 관련 버튼 기본 설정*/
+.small-btn {
+    position: absolute;
+    height: 38px;
+    width: 77px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #b8b8b8;
+
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+}

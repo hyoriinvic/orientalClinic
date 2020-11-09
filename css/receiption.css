@@ -1,0 +1,152 @@
+html { 
+    background-color : #E5E5E5;
+    width : 1440px;
+    height : 900px;
+    position : absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+/*폰트 설정*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+body {
+font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/*register 경희한의원 로고*/
+.image-container{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position : absolute;
+    height: 119px;
+    width: 447px;
+    left: 29px;
+    top: 19px;   
+}
+/*register 대기환자*/
+.waiting-box{
+    position : absolute;
+    height: 750px;
+    width: 447px;
+    left: 29px;
+    top: 153px;
+    border-radius: 8px;
+    background-color : #ffffff;
+    border: 1px solid #E2E5E6;
+    box-sizing: border-box;
+    
+}
+
+.waiting-patient{
+    position : absolute;
+    height : 96px;
+    width : 406px;
+    left : 25px;
+    top : 144px;
+    border: 1px solid #c4c4c4;
+    box-sizing : border-box;
+    border-radius : 10px;
+}
+
+
+h1{
+    position : absolute;
+    font-family: Noto Sans KR;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    left : 25px;
+    top : 20px;
+    color : #373f41;
+    letter-spacing: 0.10000000149011612px;
+}
+
+.reception-box{
+    position : fixed;
+    height: 673px;
+    width: 447px;
+    left: 29px;
+    top: 926px;
+    border-radius: 8px;
+    background-color : #ffffff;
+    border: 1px solid #E2E5E6;
+    box-sizing: border-box;
+}
+
+.receiving-patient{
+    position : absolute;
+    height : 96px;
+    width : 406px;
+    left : 25px;
+    top : 149px;
+    border: 1px solid #c4c4c4;
+    box-sizing : border-box;
+    border-radius : 10px;
+}
+
+h2{
+    position : absolute;
+    font-family: Noto Sans KR;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    top : 20px;
+    left : 25px;
+    color : #373f41;
+    letter-spacing: 0.01px;
+}
+
+.patient-registration{
+    position : fixed;
+    height: 119px;
+    width: 874px;
+    left: 506px;
+    top: 19px;
+    border-radius: 8px;
+    background-color : #ffffff;
+    border: 1px solid #E2E5E6;
+    box-sizing : border-box;
+}
+h3{
+    position : absolute;
+    font-family: Noto Sans KR;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 10px;
+    left : 46px;
+    color : #373f41;
+}
+
+.patient-information{
+    position : fixed;
+    height: 441px;
+    width: 874px;
+    left: 506px;
+    top: 153px;
+    border-radius: 8px;
+    background-color : #ffffff;
+    border: 1px solid #E2E5E6;
+    box-sizing : border-box;
+}
+
+.patient-detail{
+    height: 32px;
+    width: 128px;
+    margin-left: 56px;
+    margin-top: 136px;
+    border-radius: nullpx;
+    font-family: Mulish;
+    font-size: 24px;
+    font-style: bold;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: left;    
+}

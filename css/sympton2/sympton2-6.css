@@ -1,0 +1,25 @@
+/*---------------------------------------------------------------------------------------*/
+/* 신체 관련 (작은) 버튼 각 요소별 위치 설정 - 머리 */
+/* label 눈 위치 설정 */
+input[id="eye"] + label {
+    right: 29px;
+    top: 170px;
+}
+
+/* label 귀 위치 설정 */
+input[id="ear"] + label {
+    right: 29px;
+    top: 248px;
+}
+
+/* label 코 위치 설정 */
+input[id="nose"] + label {
+    right: 29px;
+    top: 326px;
+}
+
+/* label 입 위치 설정 */
+input[id="mouth"] + label {
+    right: 29px;
+    top: 404px;
+}

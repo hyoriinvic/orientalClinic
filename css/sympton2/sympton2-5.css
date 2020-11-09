@@ -1,0 +1,62 @@
+/*---------------------------------------------------------------------------------------*/
+/* 신체 관련 (작은) 버튼 각 요소별 위치 설정 - 전신 */
+
+/* label 목 위치 설정 */
+input[id="neck"] + label {
+    left: 48px;
+    top: 106px;
+}
+
+/* label 어깨 위치 설정 */
+input[id="sholder"] + label {
+    left: 48px;
+    top: 185px;
+}
+
+/* label 팔꿈치 위치 설정 */
+input[id="elbow"] + label {
+    left: 48px;
+    top: 263px;
+}
+
+/* label 허리 위치 설정 */
+input[id="waist"] + label {
+    left: 48px;
+    top: 341px;
+}
+
+/* label 손,손목 위치 설정 */
+input[id="wrist"] + label {
+    left: 48px;
+    top: 419px;
+}
+
+/* label 가슴 위치 설정 */
+input[id="chest"] + label {
+    left: 686px;
+    top: 223px;
+}
+
+/* label 배(복부) 위치 설정 */
+input[id="stomach"] + label {
+    left: 686px;
+    top: 302px;
+}
+
+/* label 골반 위치 설정 */
+input[id="pelvis"] + label {
+    left: 686px;
+    top: 380px;
+}
+
+/* label 무릎 위치 설정 */
+input[id="knee"] + label {
+    left: 686px;
+    top: 458px;
+}
+
+/* label 발,발목 위치 설정 */
+input[id="ankle"] + label {
+    left: 686px;
+    top: 536px;
+}

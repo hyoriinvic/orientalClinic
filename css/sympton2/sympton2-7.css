@@ -1,0 +1,31 @@
+/*---------------------------------------------------------------------------------------*/
+/* 큰 버튼(기타, 접수하기) 기본 설정 */
+.btn {
+    position: absolute;
+    height: 56px;
+    width: 347px;
+    right: 53px;
+    border-radius: 10px;
+    border: 0;
+
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+/* label 기타 버튼 위치 설정 */
+input[id="else"] + label {
+    background-color: rgba(184, 184, 184, 1);
+    top: 562px;
+}
+
+/* 제출하기 버튼 */
+.submitInfo {
+    background-color: #9d1c20;
+    top: 635px;
+}

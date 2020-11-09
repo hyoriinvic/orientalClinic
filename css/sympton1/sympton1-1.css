@@ -1,0 +1,23 @@
+/*경희 한의원 로고 배치*/
+img {
+    height: 119px;
+    width: 512px;
+    margin-left: 342px;
+    top: 77px;
+    border-radius: 0px;
+}
+
+span {
+    height: 19px;
+    width: 208px;
+    margin-left: 494px;
+    margin-top: 119px;
+    border-radius: nullpx;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}

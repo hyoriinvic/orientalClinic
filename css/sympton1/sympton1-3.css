@@ -1,0 +1,47 @@
+/*---------------------------------------------------------------------------------------*/
+/* type=라벨(label)에 대한 기본 설정 - class를 기준으로 - sympton1-2.css 에 이미 설정되어 있음 */
+/* label을 클릭하면 체크박스도 체크됨*/
+
+/* .checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label {
+	background-color: rgba(157, 28, 32, 0.75);
+}
+
+label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* 크기가 작은 버튼의 기본 설정 */
+.checkbox-container .btn2 {
+    position: absolute;
+    height: 56px;
+    width: 191px;
+    top: 574px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgba(184, 184, 184, 1);
+    color: white;
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+/* label 음주 위치 설정 */
+input[id="drinking"] + label {
+    margin-left: 400px;
+}
+
+/* label 흡연 위치 설정 */
+input[id="smoking"] + label {
+    margin-left: 606px;
+}

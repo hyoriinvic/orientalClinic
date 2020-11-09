@@ -1,0 +1,9 @@
+/* sympton 2 페이지 관련 css 파일 import */
+@import url("sympton2-1.css"); /* 로고 배치 */
+@import url("sympton2-2.css"); /* spot 관련 설정*/
+@import url("sympton2-3.css"); /* line 관련 설정*/
+@import url("sympton2-4.css"); /* 신체 관련 버튼 기본 설정*/
+@import url("sympton2-5.css"); /* 신체 관련 버튼 - 전신 파트 세부 설정*/
+@import url("sympton2-6.css"); /* 신체 관련 버튼 - 머리 파트 세부 설정*/
+@import url("sympton2-7.css"); /* 기타 버튼 설정*/
+

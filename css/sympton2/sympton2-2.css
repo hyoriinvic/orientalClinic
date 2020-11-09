@@ -1,0 +1,120 @@
+/*---------------------------------------------------------------------------------------*/
+/* spot 관련 설정 */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #9d1c20;
+    box-sizing: border-box;
+}
+
+.circle-wrapper-body {
+    height: 28px;
+    width: 28px;
+}
+
+.circle-wrapper-head {
+    height: 22px;
+    width: 22px;
+}
+
+.small-circle-body {
+    margin-top: 4px;
+    margin-left: 4px;
+    height: 14px;
+    width: 14px;
+    background-color: #9d1c20;
+}
+
+.small-circle-head {
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+    height: 11px;
+    width: 11px;
+    background-color: #9d1c20;
+}
+
+/* spot 각 요소별 위치 설정 - 전신 */
+/* 목 */
+#spot-body1 {
+    left: 281px;
+    top: 167px;
+}
+
+/* 어깨 */
+#spot-body2 {
+    left: 233px;
+    top: 195px;
+}
+
+/* 팔꿈치 */
+#spot-body3 {
+    left: 205px;
+    top: 302px;
+}
+
+/* 허리 */
+#spot-body4 {
+    left: 281px;
+    top: 288px;
+}
+
+/* 손,손목 */
+#spot-body5 {
+    left: 191px;
+    top: 368px;
+}
+
+/* 가슴 */
+#spot-body6 {
+    left: 527px;
+    top: 231px;
+}
+
+/* 배 */
+#spot-body7 {
+    left: 527px;
+    top: 316px;
+}
+
+/* 골반 */
+#spot-body8 {
+    left: 562px;
+    top: 382px;
+}
+
+/* 무릎 */
+#spot-body9 {
+    left: 555px;
+    top: 492px;
+}
+
+/* 발, 발목 */
+#spot-body10 {
+    left: 555px;
+    top: 607px;
+}
+
+/* spot 각 요소별 위치 설정 - 머리 */
+/* 눈 */
+#spot-head11 {
+    right: 247px;
+    top: 178px;
+}
+
+/* 귀 */
+#spot-head12 {
+    right: 220px;
+    top: 195px;
+}
+
+/* 코 */
+#spot-head13 {
+    right: 269px;
+    top: 201px;
+}
+
+/* 입 */
+#spot-head14 {
+    right: 269px;
+    top: 223px;
+}

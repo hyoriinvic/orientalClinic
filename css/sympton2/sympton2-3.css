@@ -1,0 +1,135 @@
+/*---------------------------------------------------------------------------------------*/
+/* 직선 관련 설정 */
+.diagonal {
+    position: absolute;
+    border: 1px solid #9d1c20;
+    background-color: #9d1c20;
+}
+
+/* 라인 각 요소별 위치 설정 */
+/* figma px 설정 시 맞지 않는 부분에 대해서는 눈 대중으로 위치 수정 */
+/* 목 */
+#line1 {
+    transform: rotate(-161.77deg);
+    margin-top: 153px;
+    margin-left: 120px;
+    /*
+    margin-top: 125px;
+    margin-left: 125px;
+    */
+}
+
+/* 어깨 */
+#line2 {
+    transform: rotate(-177.65deg);
+    margin-top: 204px;
+    margin-left: 125px;
+}
+
+/* 팔꿈치 */
+#line3 {
+    transform: rotate(-160.11deg);
+    margin-top: 300px;
+    /*282px*/
+    margin-left: 122px;
+    /*125px*/
+}
+
+/* 허리 */
+#line4 {
+    transform: rotate(161.16deg);
+    margin-top: 330px;
+    /*302px*/
+    margin-left: 120px;
+    /*125px*/
+}
+
+/* 손,손목 */
+#line5 {
+    transform: rotate(145.01deg);
+    margin-top: 406px;
+    /*382px*/
+    margin-left: 116px;
+    /*125px*/
+}
+
+/* 가슴 */
+#line6 {
+    transform: rotate(180deg);
+    margin-top: 245px;
+    /*245px*/
+    margin-left: 539px;
+    /*541px*/
+}
+
+/* 배 */
+#line7 {
+    transform: rotate(176.05deg);
+    margin-top: 323px;
+    /*321px*/
+    margin-left: 539px;
+    /*541px*/
+}
+
+/* 골반 */
+#line8 {
+    transform: rotate(-178.44deg);
+    margin-top: 396px;
+    /*396px*/
+    margin-left: 575px;
+    /*576px*/
+}
+
+/* 무릎 */
+#line9 {
+    transform: rotate(166.08deg);
+    margin-top: 490px;
+    /*477px*/
+    margin-left: 567px;
+    /*569px*/
+}
+
+/* 발,발목 */
+#line10 {
+    transform: rotate(150.57deg);
+    margin-top: 587px;
+    /*555px*/
+    margin-left: 559px;
+    /*569px*/
+}
+
+/* 눈 */
+#line11 {
+    transform: rotate(180deg);
+    margin-top: 189px;
+    /*189px*/
+    margin-left: 937px;
+    /*937px*/
+}
+
+/* 귀 */
+#line12 {
+    transform: rotate(26.01deg);
+    margin-top: 235px;
+    /*206px*/
+    margin-left: 955px;
+    /*964px*/
+}
+
+/* 코 */
+#line13 {
+    transform: rotate(37.6deg);
+    margin-top: 278px;
+    /*221px*/
+    margin-left: 891px;
+    /*915x*/
+}
+
+/* 입 */
+#line14 {
+    transform: rotate(47.04deg);
+    margin-top: 327px;
+    /*234px*/
+    margin-left: 872px;
+    /*915px*/
+}

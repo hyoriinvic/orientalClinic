@@ -1,0 +1,27 @@
+/*웹 기본 폰트 설정*/
+@font-face{
+    font-family :'Roboto';
+    src : url("./fonts/Roboto/Roboto-Light.ttf") format('truetype');
+}
+
+/*html 파일 전체에 적용되는 기본 배경 설정*/
+html {
+    position: absolute;
+    height: 900px;
+    width: 1440px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background-color: #9D1C20;
+}
+
+/*body 파트 기본 배경 - 모서리 둥근 사각형 설정*/
+body {
+    position: absolute;
+    height: 746px;
+    width: 1195px;
+    left: 122px;
+    top: 77px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}

@@ -1,0 +1,21 @@
+/*---------------------------------------------------------------------------------------*/
+/* sympton2 이미지 2개에 대한 위치 설정 */
+/*body image - 전신 */
+#body {
+    position: absolute;
+    height: 596px;
+    width: 503px;
+    margin-left: 163px;
+    margin-top: 84px;
+    border-radius: 0px;
+}
+
+/*head image - 머리 */
+#head {
+    position: absolute;
+    height: 262px;
+    width: 284px;
+    left: 773px;
+    top: 68px;
+    border-radius: 0px;
+}

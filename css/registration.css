@@ -1,0 +1,79 @@
+/*경희 한의원 로고 배치*/
+img {
+    position: absolute;
+    height: 119px;
+    width: 512px;
+    left: 342px;
+    top: 140px;
+}
+
+.info {
+    position: absolute;
+    height: 48px;
+    width: 398px;
+    left: 399px;
+    border-radius: 0px;
+    background-color: #ffffff;
+    border: 1px solid #a8a9ad;
+    box-sizing: border-box;
+}
+
+#join_patientName {
+    top: 269px;
+}
+
+#join_patientPhone {
+    top: 327px;
+}
+
+#join_addressSearch {
+    height: 48px;
+    width: 398px;
+    margin-left: 399px;
+    margin-top: 385px;
+    border-radius: 0px;
+
+    background: #ffffff;
+    border: 1px solid #a8a9ad;
+    box-sizing: border-box;
+}
+
+.btn {
+    position: absolute;
+    background-color: #9d1c20;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    border-radius: 0px;
+    border: 0;
+}
+
+#searchAddress {
+    height: 48px;
+    width: 103px;
+    left: 694px;
+    top: 385px;
+    text-align: center;
+    color: white;
+}
+
+/* 증상 입력하기 button */
+#submitInfo {
+    height: 56px;
+    width: 398px;
+    left: 399px;
+    top: 559px;
+    text-align: center;
+    color: white;
+}
+
+#join_juminNumber {
+    top: 443px;
+}
+
+#join_recommendPatient {
+    top: 501px;
+}

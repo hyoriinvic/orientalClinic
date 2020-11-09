@@ -1,0 +1,67 @@
+/*---------------------------------------------------------------------------------------*/
+/* type=라벨(label)에 대한 기본 설정 - class를 기준으로 */
+/* label을 클릭하면 체크박스도 체크됨*/
+
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label {
+	background-color: rgba(157, 28, 32, 0.75);
+}
+
+label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 크기가 큰 버튼의 기본 설정 */
+.checkbox-container .btn1 {
+    position: absolute;
+    height: 56px;
+    width: 398px;
+    left: 399px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgba(184, 184, 184, 1);
+
+    color: #FFFFFF;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+}
+
+/* label 고혈압 위치 설정 */
+input[id="high_blood_pressure"] + label {
+    top: 178px;
+}
+
+/* label 당뇨 위치 설정 */
+input[id="diabetes"] + label {
+    top: 244px;
+}
+
+/* label 간염 위치 설정 */
+input[id="hepatitis"] + label {
+    top: 310px;
+}
+
+/* label 알레르기 위치 설정 */
+input[id="allergy"] + label {
+    top: 376px;
+}
+
+/* label 수술 이력 위치 설정 */
+input[id="surgery_history"] + label {
+    top: 442px;
+}
+
+/* label 복용약 위치 설정 */
+input[id="medication"] + label {
+    top: 508px;
+}
+

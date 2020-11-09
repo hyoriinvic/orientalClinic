@@ -1,0 +1,91 @@
+/*경희 한의원 로고 배치*/
+img {
+  position: absolute;
+  height: 119px;
+  width: 512px;
+  left: 342px;
+  top: 226px;
+  border-radius: 0px;
+}
+
+.info {
+  height: 48px;
+  width: 398px;
+  margin-left: 399px;
+
+  border: 1px solid #a8a9ad;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+#join_patientName {
+  margin-top: 380px;
+}
+
+#join_patientPhone {
+  margin-top: 10px;
+}
+
+/* 증상 입력하기 button */
+#submitInfo {
+  position: absolute;
+  height: 56px;
+  width: 398px;
+  left: 399px;
+  margin-top: 15px;
+  border-radius: 0px;
+  border: 0;
+  background-color: #9d1c20;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* 처음 방문하셨습니까? */
+span {
+  position: absolute;
+  height: 19px;
+  width: 144px;
+  margin-left: 496px;
+  top: 592px;
+  border-radius: nullpx;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+
+
+  white-space: nowrap;
+  color: #000000;
+}
+
+/* 환자등록 */
+a {
+  position: absolute;
+  height: 16px;
+  width: 52px;
+  left: 656px;
+  /*648*/
+  right: 495px;
+  top: 594px;
+  /*592.84px*/
+  border-radius: nullpx;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16.41px;
+  letter-spacing: 0em;
+  text-align: justify;
+
+  white-space: nowrap;
+  color: #9d1c20;
+}
