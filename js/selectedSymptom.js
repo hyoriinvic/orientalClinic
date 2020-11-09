@@ -15,6 +15,10 @@ function isChecked() {
   return checked;
 }
 
+
+// 아래의 함수는 사용하지 않습니다
+// _________________________________________________________________________________________________
+
 function checkedButton() {
   let btns = document.getElementsByClassName("btns");
   console.log(btns); // 클래스명이 btn1인 elements 배열
