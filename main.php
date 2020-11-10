@@ -5,31 +5,53 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Kyung-hee Oriental Clinic</title>
     <link rel="stylesheet" href="css/background.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <!-- jquery cdn -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  -->
-</head>
+    <script type = "text/javascript">
+    $(document).ready(function(){
+        $('#enter').click(function(){
+            var action = $('#Login').attr('action');
+            var form_data = {
+                join_patientName : $("#join_patientName").val(),
+                join_patientTel : $("#join_patientTel").val()
+            };
+            $.ajax({
+                type:'POST',
+                url:action,
+                data:form_data,
+                success:function(response){
+                    if(response.trim() == 'success'){
+                        sessionStorage.setItem('join_patientName',form_data.join_patientName);
+                        $('#msg').html('<p>로그인성공!</p>')
+                    }else{
+                        $('#msg').html('<p>로그인실패!</p>');
+                    }
+                },
+                error:function(){
+                    $('#msg').html('<h2>error</h2>');
+                }
+            });
+        });
+    });
+    </script>
 
 <body>
     <img src="image/logo.png" alt="Kyunghee Oriental" />
 
-    <form id='login' name='login' action='./php/login.php' method='post'>
-        <div><input class="info" id="join_patientName" required placeholder="이름" autocomplete='off' type="text" /></div>
-        <div><input class="info" id="join_patientPhone" required placeholder="전화번호" autocomplete='off' type="tel" /></div>
-    </form>
+    <form id='Login' name='Login' action='./php/login.php' method='post'>
+        <div><input class="info" id="join_patientName" name = "join_patientName" required placeholder="  이름" autocomplete='off' type="text" /></div>
+        <div><input class="info" id="join_patientTel" name = "join_patientTel" required placeholder="  전화번호" autocomplete='off' type="tel" /></div>
     <div>
-        <button id="submitInfo" type="button" onclick="location.href='http://127.0.0.1/sympton1.php'">증상 입력하기</button>
+        <button id="submitInfo" type="submit">증상 입력하기</button>
     </div>
+</form>
     <div>
         <span>처음 방문하셨습니까?</span>
-        <a href="http://127.0.0.1/registration.php" target="_self">환자등록</a>
+        <a href="./registration.php" target="_self">환자등록</a>
     </div>
 
     <!-- <script type="text/javascript" src="/js/main.js"></script> -->
 </body>
-
 </html>
-
-<!--안녕하세요? 이런일이 가능하다니 세상 정말 좋아졌네요-->
