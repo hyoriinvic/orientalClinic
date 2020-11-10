@@ -18,10 +18,11 @@
     <form id='login' name='login' action='./php/login.php' method='post'>
         <div><input class="info" id="join_patientName" required placeholder="이름" autocomplete='off' type="text" /></div>
         <div><input class="info" id="join_patientPhone" required placeholder="전화번호" autocomplete='off' type="tel" /></div>
+        <div>
+            <button id="submitInfo" type="button" onclick="location.href='http://127.0.0.1/sympton1.php'">증상 입력하기</button>
+        </div>    
     </form>
-    <div>
-        <button id="submitInfo" type="button" onclick="location.href='http://127.0.0.1/sympton1.php'">증상 입력하기</button>
-    </div>
+
     <div>
         <span>처음 방문하셨습니까?</span>
         <a href="http://127.0.0.1/registration.php" target="_self">환자등록</a>
