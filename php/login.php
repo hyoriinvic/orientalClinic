@@ -20,27 +20,27 @@
 
         if($join_patientName === $row['join_patientName'] && $join_patientTel === $row['join_patientTel'])
         {
-          session_start();
-          $_SESSION['join_patientName'] = $row['join_patientName'];
-          $_SESSION['join_patientTel'] = $row['join_patientTel'];
-          ?>
-          
-          <script>
-          alert("로그인 되었습니다.");
-          location.href='./sympton1.php';
-          </script>
+            session_start();
+            $_SESSION['join_patientName'] = $row['join_patientName'];
+            $_SESSION['join_patientTel'] = $row['join_patientTel'];
+            ?>
+            
+            <script>
+            alert("로그인 되었습니다.");
+            location.href='./sympton1.php';
+            </script>
         
         
         <?php
         }
         else
         {
-          echo"session fail";
+            echo"session fail";
         ?>
-          <script>
-          alert("입력한 정보가 일치하지 않습니다.");
-          history.back()
-          </script>
+            <script>
+            alert("입력한 정보가 일치하지 않습니다.");
+            history.back()
+            </script>
         <?php
         }
         ?>
