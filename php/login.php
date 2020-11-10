@@ -39,12 +39,12 @@
         }
         else
         {
-          echo"session fail";
+            echo"session fail";
         ?>
-          <script>
-          alert("입력한 정보가 일치하지 않습니다.");
-          history.back()
-          </script>
+            <script>
+            alert("입력한 정보가 일치하지 않습니다.");
+            history.back()
+            </script>
         <?php
         }
         ?>
