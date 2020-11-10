@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/registration.css" />
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- js -->
+    <script type="text/javascript" src="./js/registeration.js"></script>
 </head>
 
 <body>
@@ -29,8 +31,6 @@
         <button class="btn" id="submitInfo" type="button"
         onclick="location.href='http://127.0.0.1/sympton1.php'">증상 입력하기</button> -->
     <button class="btn" id="submitInfo" type="button" onclick="AjaxCall();">증상 입력하기</button>
-
-    <script type="text/javascript" src="./js/registeration.js"></script>
 </body>
 
 </html>

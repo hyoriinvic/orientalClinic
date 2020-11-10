@@ -10,11 +10,18 @@ function AjaxCall(method) {
     var action = $('#register').attr('action');
 
     $.ajax({
-        type: method,
+        type: 'POST',
         url: action,
         data: patientData(),
         success: function (response) {
-            alert("Success");
+            if(response.trim() == 'success'){
+                sessionStorage.setItem('join_patientName', patientData.join_patientName);
+                $('#msg').html('<p>회원가입 성공!</p>')
+                Headers('Location :./sympton1.php');
+            }else{
+                $('#msg').html('<p>회원가입 실패</p>');
+                history.back();
+            }
         },
         error: function () {
             $('#msg').html('<h2>error</h2>');
