@@ -8,8 +8,8 @@
 
     <body>
         <?php
-            include "config.php";
-// include "config.php"
+        include "config.php";
+        
         $join_patientName=$_POST['join_patientName'];
         $join_patientTel=$_POST['join_patientTel'];
 
