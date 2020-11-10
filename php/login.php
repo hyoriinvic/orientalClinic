@@ -8,46 +8,41 @@
 
     <body>
         <?php
-
+            include "config.php";
 // include "config.php"
+        $join_patientName=$_POST['join_patientName'];
+        $join_patientTel=$_POST['join_patientTel'];
 
-$hostName = "localhost";
-$user = "root";
-$password = "orientalclinic123";
-$dbName = "oriental";
-$mysqli = mysqli_connect($hostName, $user, $password);
-$db_handle = mysqli_select_db($mysqli, $dbName);
+        $query = "SELECT * FROM patient_db WHERE join_patientName = '$join_patientName' AND join_patientTel = '$join_patientTel'";
 
-$join_patientName = $_POST['join_patientName'];
-$join_patientPhone = $_POST['join_patientPhone'];
+        $result = mysqli_query($connect,$query);
+        $row = mysqli_fetch_array($result);
 
-$existingPatient = "SELECT * FROM patient_info WHERE join_patientName = '$join_patientName' AND join_patientPhone = '$join_patientPhone'";
-
-$result = mysqli_query($mysqli, $existingPatient);
-$row = mysqli_fetch_array($result);
-
-if ($join_patientName === $row['join_patientName'] && $join_patientPhone === $row['join_patientPhone']) {
-    //session , local
-    session_start();
-    $_SESSION['join_patientName'] = $row['join_patientName'];
-    $_SESSION['join_patientPhone'] = $row['join_patientPhone'];
-
-    ?>
-            <script>
-                alert("Success.");
-                location.href='http://127.0.0.1/sympthon1.php';
-            </script>
+        if($join_patientName === $row['join_patientName'] && $join_patientTel === $row['join_patientTel'])
+        {
+          session_start();
+          $_SESSION['join_patientName'] = $row['join_patientName'];
+          $_SESSION['join_patientTel'] = $row['join_patientTel'];
+          ?>
+          
+          <script>
+          alert("로그인 되었습니다.");
+          location.href='./sympton1.php';
+          </script>
+        
+        
         <?php
-} else {
-    echo "session fail";
-    ?>
-            <script>
-                alert("Fail. Information not matched.");
-                history.back()
-            </script>
+        }
+        else
+        {
+          echo"session fail";
+        ?>
+          <script>
+          alert("입력한 정보가 일치하지 않습니다.");
+          history.back()
+          </script>
         <?php
-}
-
-?>
+        }
+        ?>
     </body>
 </html>
