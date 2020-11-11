@@ -25,12 +25,12 @@ function isChecked() {
   return checked;
 }
 
-// 제출하기 버튼을 누를 경우, 
+// 제출하기 버튼을 누를 경우,
 $(document).ready(function () {
   $('#submitInfo').click(function () {
     var action = $('#submitInfo').attr('action');
     var form_data = {
-      patientSymtpon1: isChecked() // isChecked() 함수를 통해 저장되는 배열을 전달
+      patientSymtpon1: isChecked() // isChecked() 함수를 통해 저장되는 배열을 전달 - 이 부분이 가능한지 확인 필요해요 :)
     };
 
     $.ajax({
