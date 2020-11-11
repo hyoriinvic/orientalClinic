@@ -10,7 +10,7 @@ class = "btns"
 
 function isChecked() {
   let btns = document.getElementsByClassName("btns");
-  console.log(btns); // 클래스명이 btn1인 elements 배열
+  // console.log(btns); // 클래스명이 btn1인 elements 배열
 
   var checked = []; //check 여부를 저장할 배열 (1: checked, 0: not checked)
 
@@ -24,6 +24,32 @@ function isChecked() {
   console.log(checked); // 생성된 배열 확인
   return checked;
 }
+
+// 제출하기 버튼을 누를 경우, 
+$(document).ready(function () {
+  $('#submitInfo').click(function () {
+    var action = $('#submitInfo').attr('action');
+    var form_data = {
+      patientSymtpon1: isChecked() // isChecked() 함수를 통해 저장되는 배열을 전달
+    };
+
+    $.ajax({
+      type: 'POST',
+      url: action,
+      data: form_data,
+      success: function (response) {
+        if (response.trim() == 'success') {
+          $('msg').html('<p>증상 입력 성공!</p>')
+        } else {
+          $('msg').html('<p>증상 입력 실패!</p>')
+        }
+      },
+      error: function () {
+        $('msg').html('<h2>error</h2>');
+      }
+    });
+  });
+});
 
 
 // 아래의 함수는 사용하지 않습니다

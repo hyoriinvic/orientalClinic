@@ -22,7 +22,7 @@
 
     <span style="color:#9D1C20">해당되는 사항</span>만 클릭해주세요.
 
-    <form>
+    <form id='symptonCheck1' name='symptonCheck1' method='post' action="./php/patientSympton1.php">
         <div class="checkbox-container">
             <div>
                 <input type="checkbox" class="btns" id="high_blood_pressure">
@@ -58,11 +58,13 @@
             </div>
         </div>
     </form>
+
     <footer>
         <!-- <button id="submitInfo" type="button" onclick="location.href='http://127.0.0.1/sympton2.php'">제출하기</button> -->
-        <button id="submitInfo" type="button" onclick="isChecked();">제출하기</button>
+        <button id="submitInfo" name="join_symptons1" type="button">제출하기</button>
     </footer>
-    <!-- <script type="text/javascript" src="./js/sympton1.js"></script> -->
+    
     <script type="text/javascript" src="./js/selectedSymptom.js"></script>
+
     </body>
 </html>
