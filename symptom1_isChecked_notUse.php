@@ -61,7 +61,7 @@
 
     <footer>
         <!-- <button id="submitInfo" type="button" onclick="location.href='http://127.0.0.1/sympton2.php'">제출하기</button> -->
-        <button id="submitInfo" name="join_symptons1" type="button">제출하기</button>
+        <button id="submitInfo" name="join_symptons1" type="button" onclick="isChecked();">제출하기</button>
     </footer>
     
     <script type="text/javascript" src="./js/selectedSymptom.js"></script>

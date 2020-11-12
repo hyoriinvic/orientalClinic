@@ -12,49 +12,25 @@ function isChecked() {
   let btns = document.getElementsByClassName("btns");
   // console.log(btns); // 클래스명이 btn1인 elements 배열
 
-  var checked = []; //check 여부를 저장할 배열 (1: checked, 0: not checked)
+  // var checked = []; //check 여부를 저장할 배열 (1: checked, 0: not checked)
 
   $.each(btns, function (index, item) {
     if ($(item).is(":checked")) {
-      checked.push("1");
+      $(item).val() = "1";
+      // checked.push("1");
     } else {
-      checked.push("0");
+      $(item).val() = "0";
+      // checked.push("0");
     }
   })
-  console.log(checked); // 생성된 배열 확인
-  return checked;
+  // console.log(checked); // 생성된 배열 확인
+  // return checked;
 }
-
-// 제출하기 버튼을 누를 경우,
-$(document).ready(function () {
-  $('#submitInfo').click(function () {
-    var action = $('#submitInfo').attr('action');
-    var form_data = {
-      patientSymtpon1: isChecked() // isChecked() 함수를 통해 저장되는 배열을 전달 - 이 부분이 가능한지 확인 필요해요 :)
-    };
-
-    $.ajax({
-      type: 'POST',
-      url: action,
-      data: form_data,
-      success: function (response) {
-        if (response.trim() == 'success') {
-          $('msg').html('<p>증상 입력 성공!</p>')
-        } else {
-          $('msg').html('<p>증상 입력 실패!</p>')
-        }
-      },
-      error: function () {
-        $('msg').html('<h2>error</h2>');
-      }
-    });
-  });
-});
-
 
 // 아래의 함수는 사용하지 않습니다
 // _________________________________________________________________________________________________ //
 
+/*
 function checkedButton() {
   let btns = document.getElementsByClassName("btns");
   console.log(btns); // 클래스명이 btn1인 elements 배열
@@ -83,6 +59,7 @@ function checkedButtonIndex() {
   console.log(checkedBtnsIndex); // 저장된 index 확인
   return checkedBtnsIndex;
 }
+*/
 
 
 // function checkedButton() {

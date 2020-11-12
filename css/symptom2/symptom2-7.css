@@ -19,7 +19,7 @@
 }
 
 /* label 기타 버튼 위치 설정 */
-input[id="else"] + label {
+input[id="other"] + label {
     background-color: rgba(184, 184, 184, 1);
     top: 562px;
 }

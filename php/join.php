@@ -19,7 +19,9 @@
     }else{
         echo "<script>alert(\"회원가입에 실패했습니다. 관리자에게 문의하십시오.\");</script>";
     };
-    header('location:/sympton1.php');
-mysqli_close($mysqli);
+    header('location:/main.php');
+mysqli_close($connect);
 ?>
+
+
 

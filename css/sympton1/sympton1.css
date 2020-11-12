@@ -1,6 +1,0 @@
-/* sympton 1 페이지 관련 css 파일 import */
-
-@import url("sympton1-1.css"); /* 로고 배치 */
-@import url("sympton1-2.css"); /* 크기가 큰 버튼에 대한 설정 */
-@import url("sympton1-3.css"); /* 크기가 작은 버튼(음주, 흡연 2개)에 대한 설정 */ 
-@import url("sympton1-4.css"); /* 제출하기 버튼에 대한 설정 */

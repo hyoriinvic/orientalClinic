@@ -14,11 +14,11 @@ function AjaxCall(method) {
         url: action,
         data: patientData(),
         success: function (response) {
-            if(response.trim() == 'success'){
+            if (response.trim() == 'success') {
                 sessionStorage.setItem('join_patientName', patientData.join_patientName);
                 $('#msg').html('<p>회원가입 성공!</p>')
                 Headers('Location :/sympton1.php');
-            }else{
+            } else {
                 $('#msg').html('<p>회원가입 실패</p>');
                 history.back();
             }

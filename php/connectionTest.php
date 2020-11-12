@@ -10,10 +10,10 @@
 <?php
 echo "MySql-PHP 연결 테스트<br>";
 
-$host = 'localhost'; // 호스트명
-$user = 'root'; // 계정명
-$pw = 'orientalclinic123'; // 비밀번호
-$dbName = 'oriental'; // 데이터베이스명
+$host = 'localhost';
+$user = 'root';
+$pw = 'autoset';
+$dbName = 'kyunghee';
 
 $db = mysqli_connect($host, $user, $pw, $dbName); //MySQL 연결
 
