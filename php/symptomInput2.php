@@ -24,18 +24,15 @@
 
     $other = $_POST['other']; //기타
 
-    $sql = 'INSERT INTO patient_db 
-    (neck, sholder, elbow, waist, wrist, chest, stomach, pelvis, knee, ankle, eye, ear, nose, mouth, other)';
-    $sql = $sql."values
-    ('$neck', '$sholder', '$elbow', '$waist', '$wrist', '$chest', '$stomach', '$pelvis', '$knee', '$ankle',
-    '$eye', '$ear', '$nose', '$mouth', '$other')";
+    $sql = 'INSERT INTO patient_db (neck, sholder, elbow, waist, wrist, chest, stomach, pelvis, knee, ankle, eye, ear, nose, mouth, other)';
+    $sql = $sql."values('$neck', '$sholder', '$elbow', '$waist', '$wrist', '$chest', '$stomach', '$pelvis', '$knee', '$ankle', '$eye', '$ear', '$nose', '$mouth', '$other')";
     
     if($connect->query($sql)){
         echo "<script>alert(\"증상입력이 완료되었습니다.\");</script>";
     } else{
         echo "<script>alert(\"증상입력에 실패했습니다. 관리자에게 문의하십시오.\");</script>";
     };
-    header('location:/sympton2.php');
+    header('location:/main.php');
 
     mysqli_close($connect);
 ?>

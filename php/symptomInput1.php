@@ -22,7 +22,7 @@
     } else{
         echo "<script>alert(\"증상입력에 실패했습니다. 관리자에게 문의하십시오.\");</script>";
     };
-    header('location:/sympton2.php');
+    header('location:/symptom2.php');
 
     mysqli_close($connect);
 ?>
