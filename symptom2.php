@@ -17,7 +17,7 @@
     $join_patientTel = $_SESSION['join_patientTel']; //세션에서 값을 받아옵니다.
 
     if(!$join_patientName) {
-        header('location:/main.php');
+        header('location:/main.php');   
       //아이디값이 없을경우 세션이 만료되었다는 의미이므로 처리할 코드를 입력합니다.
     }
     ?>
@@ -30,6 +30,17 @@
         // 제출하기 버튼을 누를 경우,          
         $(document).ready(function(){
             $('submitInfo').click(function(){
+
+                let btns = document.getElementsByClassName("btns");
+
+                $.each(btns, function (index, item) {
+                    if ($(item).is(":checked")) {
+                    $(item).val() = "1";
+                    } else {
+                    $(item).val() = "0";
+                    }
+                })
+
                 var action = $('submitInfo').attr('action');
                 var form_data = {
                     neck : $("neck").val(),
