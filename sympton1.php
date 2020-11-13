@@ -5,31 +5,25 @@
 <head>
     <?php
     session_cache_expire(5); //세션이 유지될 시간을 입력합니다.
-
     session_start();
 
-
-
     $join_patientName	= $_SESSION['join_patientName'];   //세션에서 값을 받아옵니다.
-
     $join_patientTel = $_SESSION['join_patientTel']; //세션에서 값을 받아옵니다.
-
-	
 
     if(!$join_patientName) {
         header('location:/main.php');
-
       //아이디값이 없을경우 세션이 만료되었다는 의미이므로 처리할 코드를 입력합니다.
     }	
-
     ?>
+
     <meta charset="utf-8" />
     <title>Kyung-hee Oriental Clinic</title>
     <link rel="stylesheet" href="css/background.css" />
-    <link rel="stylesheet" href="css/sympton1/symptom1.css" />
+    <link rel="stylesheet" href="css/symptom1/symptom1.css" />
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/selectedSymptom.js"></script>
+    <!-- js -->
+    <!-- <script type="text/javascript" src="./js/selectedSymptom.js"></script> -->
     <script type="text/javascript">
     function isChecked() {
         let btns = document.getElementsByClassName("btns");
@@ -45,7 +39,7 @@
             }
         })
         console.log(checked); // 생성된 배열 확인
-        return checked;
+        // return checked;
         }
         
     $(document).ready(function(){

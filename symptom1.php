@@ -8,7 +8,6 @@
 
     <?php
     session_cache_expire(5); //세션이 유지될 시간을 입력합니다.
-
     session_start();
 
     $join_patientName	= $_SESSION['join_patientName'];   //세션에서 값을 받아옵니다.
@@ -40,8 +39,6 @@
                     $(item).val() = "0";
                     }
                 })
-
-                console.log
 
                 var action = $('submitInfo').attr('action');
                 var form_data = {
