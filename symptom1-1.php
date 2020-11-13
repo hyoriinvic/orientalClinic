@@ -33,36 +33,35 @@
             var checked = []; //check 여부를 저장할 배열 (1: checked, 0: not checked)
 
             $.each(btns, function (index, item) {
-                if ($(item).is(":checked")) {
-                    $(item).val() = "1";
-                    checked.push("1");
-                } else {
-                    $(item).val() = "0";
-                    checked.push("0");
+                if ($(item).is(":checked") == true) {
+                    $(item).val("1");
+                    //checked.push("1");
                 }
+                console.log($(item).val());
+                checked.push($(item).val());            
             })
-            console.log(checked); // 생성된 배열 확인
-            // return checked;
+            console.log(checked);
+            return checked;
             }
-
 
         // 제출하기 버튼을 누를 경우,          
         $(document).ready(function(){
-
-            isChecked();
-
             $('#submitInfo').click(function(){
+
+                var data = isChecked();
+                console.log(data);
+                console.log(data.length);
 
                 var action = $('submitInfo').attr('action');
                 var form_data = {
-                    high_blood_pressure : $("$high_blood_pressure").val(),
-                    diabetes : $("diabetes").val(),
-                    hepatitis : $("hepatitis").val(),
-                    allergy : $("allergy").val(),
-                    surgery_history : $("surgery_history").val(),
-                    medication : $("medication").val(),
-                    drinking : $("drinking").val(),
-                    smoking : $("smoking").val()
+                    high_blood_pressure : data[0],
+                    diabetes : data[1],
+                    hepatitis : data[2],
+                    allergy : data[3],
+                    surgery_history : data[4],
+                    medication : data[5],
+                    drinking : data[6]
+                    smoking : data[7]
                 };
                     
         $.ajax({
@@ -130,4 +129,3 @@
     </form>
     </body>
 </html>
-
