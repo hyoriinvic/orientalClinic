@@ -41,6 +41,8 @@
                     }
                 })
 
+                console.log
+
                 var action = $('submitInfo').attr('action');
                 var form_data = {
                     high_blood_pressure : $("$high_blood_pressure").val(),

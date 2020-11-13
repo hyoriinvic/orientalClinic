@@ -26,7 +26,7 @@
     <meta charset="utf-8" />
     <title>Kyung-hee Oriental Clinic</title>
     <link rel="stylesheet" href="css/background.css" />
-    <link rel="stylesheet" href="css/sympton1/sympton1.css" />
+    <link rel="stylesheet" href="css/sympton1/symptom1.css" />
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/selectedSymptom.js"></script>
@@ -86,7 +86,7 @@
 
     <span style="color:#9D1C20">해당되는 사항</span>만 클릭해주세요.
 
-    <form action = './php/symptonInput.php' method = "POST">
+    <form action = './php/symptomInput1.php' method = "POST">
         <div class="checkbox-container">
             <div>
                 <input type="checkbox" name = 'high_blood_pressure' class="btns" id="high_blood_pressure" value = '1'>
