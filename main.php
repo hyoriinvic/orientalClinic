@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <script type = "text/javascript">
     $(document).ready(function(){
-        $('#enter').click(function(){
+        $('#submitInfo').click(function(){
             var action = $('#Login').attr('action');
             var form_data = {
                 join_patientName : $("#join_patientName").val(),
@@ -22,11 +22,15 @@
                 url:action,
                 data:form_data,
                 success:function(response){
-                    if(response.trim() == 'success'){
-                        sessionStorage.setItem('join_patientName',form_data.join_patientName);
-                        $('#msg').html('<p>로그인성공!</p>')
+                    if(response){
+                        
+                        if (typeof(Storage) !== "undefined") {
+                            // Store
+                            sessionStorage.setItem('join_patientName',form_data.join_patientName);
+                            // Retrieve
+                            //document.getElementById("result").innerHTML = sessionStorage.getItem("lastname");
+                        }
                     }else{
-                        $('#msg').html('<p>로그인실패!</p>');
                     }
                 },
                 error:function(){

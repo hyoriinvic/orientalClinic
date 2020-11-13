@@ -5,20 +5,6 @@
     <title>Kyung-hee Oriental Clinic</title>
     <link rel="stylesheet" href="css/background.css" />
     <link rel="stylesheet" href="css/symptom1/symptom1.css" />
-
-    <?php
-    session_cache_expire(5); //세션이 유지될 시간을 입력합니다.
-    session_start();
-
-    $join_patientName	= $_SESSION['join_patientName'];   //세션에서 값을 받아옵니다.
-    $join_patientTel = $_SESSION['join_patientTel']; //세션에서 값을 받아옵니다.
-
-    if(!$join_patientName) {
-        header('location:/main.php');
-      //아이디값이 없을경우 세션이 만료되었다는 의미이므로 처리할 코드를 입력합니다.
-    }	
-    ?>
-
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -48,6 +34,7 @@
 
         // 제출하기 버튼을 누를 경우,          
         $(document).ready(function(){
+            alert(sessionStorage.getItem("join_patientName"));
 
             isChecked();
 

@@ -13,6 +13,18 @@
     <!-- <script type="text/javascript" src="./js/selectedSymptom.js"></script> check 되면 value 바꿔주는 isChecked() 
     <script type="text/javascript" src="./js/postSymptom1.js"></script>--> 
     <script type="text/javascript"> 
+        
+        // 제출하기 버튼을 누를 경우,          
+        $(document).ready(function(){
+            $('#submitInfo').click(function(){
+
+            var data = isChecked();
+            //console.log(data.length);
+                    
+           
+            });
+        });
+
         function isChecked() {
             let btns = document.getElementsByClassName("btns");
             // console.log(btns); // 클래스명이 btn1인 elements 배열
@@ -20,54 +32,17 @@
             var checked = []; //check 여부를 저장할 배열 (1: checked, 0: not checked)
 
             $.each(btns, function (index, item) {
-                if ($(item).is(":checked") == true) {
-                    $(item).val("1");
-                }else{
+                if (!$(item).is(":checked")) {
                     $(item).val("0");
+                }else{
+                    $(item).val("1");
                 }
                 checked.push($(item).val());            
                 console.log($(item).val());
             })
             console.log(checked);
             return checked;
-            }
-
-        // 제출하기 버튼을 누를 경우,          
-        $(document).ready(function(){
-            $('#submitInfo').click(function(){
-
-                var data = isChecked();
-                console.log(data);
-                console.log(data.length);
-                console.log(typeof(data[0]));
-
-        //         var action = $('submitInfo').attr('action');
-        //         var form_data = {
-        //             high_blood_pressure : data[0],
-        //             diabetes : data[1],
-        //             hepatitis : data[2],
-        //             allergy : data[3],
-        //             surgery_history : data[4],
-        //             medication : data[5],
-        //             drinking : data[6],
-        //             smoking : data[7]
-        //         };
-                    
-        // $.ajax({
-        //     type:'POST',
-        //     url:action,
-        //     data:form_data,
-        //     success:function(response){
-        //         if(response.trim() == 'success'){
-        //             $('msg').html('<p>증상입력 성공!</p>')
-        //         }else{
-        //             $('msg').html('<p>증상입력 실패!</p>')
-        //         }
-        //     },
-        //     error:function(){ $('msg').html('<h2>error</h2>');}
-        //     });
-        });
-    });
+        }
     </script>
 </head>
 
