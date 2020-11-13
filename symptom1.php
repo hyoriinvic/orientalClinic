@@ -26,19 +26,32 @@
     <!-- <script type="text/javascript" src="./js/selectedSymptom.js"></script> check 되면 value 바꿔주는 isChecked() 
     <script type="text/javascript" src="./js/postSymptom1.js"></script>--> 
     <script type="text/javascript"> 
+        function isChecked() {
+            let btns = document.getElementsByClassName("btns");
+            // console.log(btns); // 클래스명이 btn1인 elements 배열
+
+            var checked = []; //check 여부를 저장할 배열 (1: checked, 0: not checked)
+
+            $.each(btns, function (index, item) {
+                if ($(item).is(":checked")) {
+                    $(item).val() = "1";
+                    checked.push("1");
+                } else {
+                    $(item).val() = "0";
+                    checked.push("0");
+                }
+            })
+            console.log(checked); // 생성된 배열 확인
+            // return checked;
+            }
+
+
         // 제출하기 버튼을 누를 경우,          
         $(document).ready(function(){
+
+            isChecked();
+
             $('submitInfo').click(function(){
-
-                let btns = document.getElementsByClassName("btns");
-
-                $.each(btns, function (index, item) {
-                    if ($(item).is(":checked")) {
-                    $(item).val() = "1";
-                    } else {
-                    $(item).val() = "0";
-                    }
-                })
 
                 var action = $('submitInfo').attr('action');
                 var form_data = {
@@ -76,35 +89,35 @@
     <form action = './php/symptomInput1.php' method = "POST">
         <div class="checkbox-container">
             <div>
-                <input type="checkbox" name = 'high_blood_pressure' class="btns" id="high_blood_pressure" value='1'>
+                <input type="checkbox" name = 'high_blood_pressure' class="btns" id="high_blood_pressure" value='0'>
                 <label class="btn1" for="high_blood_pressure">고혈압</label>
             </div>
             <div>
-                <input type="checkbox" name = 'diabetes' class="btns" id="diabetes" value='1'>
+                <input type="checkbox" name = 'diabetes' class="btns" id="diabetes" value='0'>
                 <label class="btn1" for="diabetes">당뇨</label>
             </div>
             <div>
-                <input type="checkbox" name = 'hepatitis' class="btns" id="hepatitis" value='1'>
+                <input type="checkbox" name = 'hepatitis' class="btns" id="hepatitis" value='0'>
                 <label class="btn1" for="hepatitis">간염</label>
             </div>
             <div>
-                <input type="checkbox" name = 'allergy' class="btns" id="allergy" value='1'>
+                <input type="checkbox" name = 'allergy' class="btns" id="allergy" value='0'>
                 <label class="btn1" for="allergy">알레르기</label>
             </div>
             <div>
-                <input type="checkbox" name = 'surgery_history' class="btns" id="surgery_history" value='1'>
+                <input type="checkbox" name = 'surgery_history' class="btns" id="surgery_history" value='0'>
                 <label class="btn1" for="surgery_history">수술 이력</label>
             </div>
             <div>
-                <input type="checkbox" name = 'medication' class="btns" id="medication" value='1'>
+                <input type="checkbox" name = 'medication' class="btns" id="medication" value='0'>
                 <label class="btn1" for="medication">복용약</label>
             </div>
             <div>
-                <input type="checkbox" name = 'drinking' class="btns" id="drinking" value='1'>
+                <input type="checkbox" name = 'drinking' class="btns" id="drinking" value='0'>
                 <label class="btn2" for="drinking">음주</label>
             </div>
             <div>
-                <input type="checkbox" name = 'smoking' class="btns" id="smoking" value='1'>
+                <input type="checkbox" name = 'smoking' class="btns" id="smoking" value='0'>
                 <label class="btn2" for="smoking">흡연</label>
             </div>
         </div>
