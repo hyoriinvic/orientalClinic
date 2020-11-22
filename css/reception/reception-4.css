@@ -1,0 +1,80 @@
+/* DB에서 가져오는 환자 기본 정보가 들어갈 칸 */
+.patientBasicFromDB {
+    position: absolute;
+    
+    width: 356px;
+    height: 32px;
+    margin-left: 275px;
+
+    /* text 설정 */
+    font-family: Mulish;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    color: #737B7D;
+
+    white-space: nowrap; /* 줄바꿈 안 되도록 */
+
+    /* 지금은 잠깐 형태가 보이도록 설정해두겠습니다! 
+    border: 1px solid #7C7C7C;
+    box-sizing: border-box;
+    border-radius: 0px;
+    */
+}
+
+/* 기본 정보 */
+#patientBasic {
+    width: 874px;
+    height: 441px;
+    left: 506px;
+    top: 153px;
+}
+
+#patientBasicButton {
+    width: 70px;
+    margin-left: 271px;
+    margin-top: 46px;
+}
+
+#patientName {
+    margin-top: 136px;
+}
+
+#patientNameDB {
+    margin-top: 136px;
+}
+
+#juminNumber {
+    margin-top: 188px;
+}
+
+#juminNumberDB {
+    margin-top: 188px;
+}
+
+#address {
+    margin-top: 240px;
+}
+
+#addressDB {
+    margin-top: 240px;
+}
+
+#patientTel {
+    margin-top: 292px;
+}
+
+#patientTelDB {
+    margin-top: 292px;
+}
+
+#recommendPatient {
+    margin-top: 344px;
+}
+
+#recommendPatientDB {
+    margin-top: 344px;
+}

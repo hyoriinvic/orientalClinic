@@ -1,0 +1,7 @@
+/* reception 페이지 관련 css 파일 import */
+
+@import url("reception-1.css"); /* 페이지 배경 기본 설정 (폰트, 색상 등) */
+@import url("reception-2.css"); /* 페이지를 구성하는 클래스의 기본 설정 */
+@import url("reception-3.css"); /* 페이지 id별 세부 설정 */
+@import url("reception-4.css"); /* 기본 정보 파트 세부 설정 */
+@import url("reception-5.css"); /* 초진 정보 파트 세부 설정 */

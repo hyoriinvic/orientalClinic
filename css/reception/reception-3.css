@@ -1,0 +1,69 @@
+/* 페이지 id별 세부 설정 */
+
+#logo{
+    height: 119px;
+    width: 447px;
+    left: 29px;
+    top: 19px;
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 대기 환자 */
+#before {
+    height: 750px;
+    width: 447px;
+    left: 29px;
+    top: 153px;
+}
+
+/* 수납 환자 */
+#after {
+    width: 447px;
+    height: 673px;
+    left: 29px;
+    top: 926px;
+}
+
+/* 환자 등록 */
+#register {
+    width: 874px;
+    height: 119px;
+    left: 506px;
+    top: 19px;
+}
+
+#registerText {
+    margin-top: 32px;
+
+    line-height: 56px;
+    letter-spacing: 0.2px;
+}
+
+/* 증상 */
+#patientSymptom {
+    width: 874px;
+    height: 398px;
+    left: 506px;
+    top: 1201px;
+}
+
+#symptomBox {
+    position: absolute;
+
+    width: 777px;
+    height: 211px;
+    margin-left: 46px;
+    margin-top: 111px;
+
+    background-color: #F4F5F4;
+}
+
+#patientSymptomButton {
+    width: 100px;
+    margin-left: 723px;
+    margin-top: 337px;
+}

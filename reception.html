@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyung-hee Oriental Clinic</title>
+    <link rel = 'stylesheet' href = 'css/reception/reception.css'/>
+</head>
+
+<body>
+    <!-- 경희한의원 로고 -->
+    <div class="box" id="logo"><img src="image/logo.png" alt="Kyunghee Oriental" /></div>
+    <!-- 대기 환자 -->
+    <div class="box" id="before">
+        <div class="text">대기 환자</div>
+    </div>
+    <!-- 수납 환자  -->
+    <div class="box" id="after">
+        <div class="text">수납 환자</div>
+    </div>
+    <!-- 환자 등록 -->
+    <div class="box" id="register"><div class="text" id="registerText">환자 등록</div></div>
+    <!-- 기본 정보 -->
+    <div class="box" id="patientBasic">
+        <div class="text">기본 정보</div>
+        <button class="button" id="patientBasicButton" type="button">수정</button>
+        <!-- 
+            비어있는 div는 추후 JS에서 DB에 저장된 정보를 받아와
+            document.getElementById(“div_name”).innerHTML = "something";
+            형태로 입력할 수 있습니다. 
+        -->
+        <div>
+            <div class="textSub" id="patientName">이름</div>
+            <div class="patientBasicFromDB" id="patientNameDB"></div>
+        </div>
+        <div>
+            <div class="textSub" id="juminNumber">주민번호</div>
+            <div class="patientBasicFromDB" id="juminNumberDB"></div>
+        </div>
+        <div>
+            <div class="textSub" id="address">주소</div>
+            <div class="patientBasicFromDB" id="addressDB"></div>
+        </div>
+        <div>
+            <div class="textSub" id="patientTel">휴대폰 번호</div>
+            <div class="patientBasicFromDB" id="patientTelDB"></div>
+        </div>
+        <div>
+            <div class="textSub" id="recommendPatient">소개 환자</div>
+            <div class="patientBasicFromDB" id="recommendPatientDB"></div>
+        </div>
+
+    </div>
+    <!-- 초진 정보 -->
+    <div class="box" id="patientInfo">
+        <div class="text">초진 정보</div>
+        <div class="checkbox-container">
+            <div class="leftSide">
+                <div>
+                    <input type="checkbox" class="left" name = 'high_blood_pressure' id="high_blood_pressure">
+                    <label class="leftLabel" for="high_blood_pressure"><span>고혈압</span></label>
+                    <input type="text" class="additionalInfo" id="add1" placeholder="혈압">
+                </div>
+                <div>
+                    <input type="checkbox" class="left" name = 'diabetes' id="diabetes">
+                    <label class="leftLabel" for="diabetes"><span>당뇨</span></label>
+                    <input type="text" class="additionalInfo" id="add2" placeholder="당뇨">
+                </div>
+                <div>
+                    <input type="checkbox" class="left" name = 'hepatitis' id="hepatitis">
+                    <label class="leftLabel" for="hepatitis"><span>간염</span></label>
+                </div>
+                <div>
+                    <input type="checkbox" class="left" name = 'allergy' id="allergy">
+                    <label class="leftLabel" for="allergy"><span>알러지</span></label>
+                    <input type="text" class="additionalInfo" id="add3" placeholder="알러지 입력">
+                </div>
+                <div>
+                    <input type="checkbox" class="left" name = 'surgery_history' id="surgery_history">
+                    <label class="leftLabel" for="surgery_history"><span>수술</span></label>
+                    <input type="text" class="additionalInfo" id="add4" placeholder="수술력 입력">
+                </div>
+                <div>
+                    <input type="checkbox" class="left" name = 'medication' id="medication">
+                    <label class="leftLabel" for="medication"><span>복용약</span></label>
+                    <input type="text" class="additionalInfo" id="add5" placeholder="복용약 입력">
+                </div>
+            </div>
+        </div>
+        <div class="checkbox-container">
+            <div class="rightSide">
+                <div>
+                    <input type="checkbox" class="right" name = 'drinking' id="drinking">
+                    <label class="rightLabel" for="drinking"><span>음주</span></label>
+                </div>
+                <div>
+                    <input type="checkbox" class="right" name = 'smoking' id="smoking">
+                    <label class="rightLabel" for="smoking"><span>흡연</span></label>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- 증상 -->
+    <div class="box" id="patientSymptom">
+        <div class="text">증상</div>
+        <div id="symptomBox"></div>
+        <button class="button" id="patientSymptomButton" type="button">입력완료</button>
+    </div>
+
+</body>

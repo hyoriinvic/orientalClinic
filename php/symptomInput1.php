@@ -27,7 +27,4 @@
         }
         
         echo json_encode($return_array, JSON_UNESCAPED_UNICODE);
-    }
-    
-
 ?>

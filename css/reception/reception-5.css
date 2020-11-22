@@ -1,0 +1,113 @@
+/* 초진 정보 */
+#patientInfo {
+    width: 874px;
+    height: 578px;
+    left: 506px;
+    top: 609px;
+}
+
+/* 새로운 디자인의 체크박스 생성 */
+.checkbox-container input[type="checkbox"]{
+    position: relative;
+    overflow: hidden;
+
+    width:30px; 
+    height:30px;
+    margin-top: 40px;   
+}
+
+.checkbox-container input[type="checkbox"] + label::before{
+    background-color: #FFFFFF;
+    border: 2px solid #C3CBCD;
+    box-sizing: border-box;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label::after{
+    background: url("/image/checked.png");
+}
+
+/* label 에 대한 기본 설정*/
+label{
+    position: relative;
+    width: 353px;
+    height: 32px;
+    top: 100px;
+    margin-left: 90px;
+
+    /* label font */
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737B7D;
+
+    vertical-align: 5px;
+}
+
+.checkbox-container .leftSide .left{
+    top: 100px;
+    left: 56px;
+}
+
+.checkbox-container .leftSide .leftLabel{
+    margin-left: 90px;
+}
+
+/* 오른쪽 친구들 위로 올리는 방법 ???  */
+.checkbox-container .rightSide .right{
+    top: 100px;
+    left: 631px;
+}
+
+.checkbox-container .rightSide .rightLabel{
+    margin-left: 665px;
+}
+
+/* 추가 입력 사항들 기본 설정 */
+.additionalInfo {
+    position: absolute;
+
+    height: 42px;
+    width: 250px;
+    left: 248px;
+    border-radius: 0px;
+    border: none;
+    background-color: #F4F5F4;
+
+    /* Body 2 - regular 14 (20, 0.2px) */
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+
+    color: #737B7D;
+
+    padding-left: 16px;
+}
+
+#add1 {
+    top: 137px;
+}
+
+#add2 {
+    top: 211px;
+}
+
+#add3 {
+    top: 360px;
+}
+
+#add4 {
+    top: 432px;
+}
+
+#add5 {
+    top: 506px;
+}
