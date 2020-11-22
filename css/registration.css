@@ -4,7 +4,7 @@ img {
     height: 119px;
     width: 512px;
     left: 342px;
-    top: 140px;
+    top: 111px;
 }
 
 .info {
@@ -19,23 +19,51 @@ img {
 }
 
 #join_patientName {
-    top: 269px;
+    top: 240px;
 }
 
 #join_patientTel {
-    top: 327px;
+    top: 298px;
 }
 
 #join_addressSearch {
     height: 48px;
     width: 398px;
     margin-left: 399px;
-    margin-top: 385px;
+    margin-top: 356px;
     border-radius: 0px;
 
     background: #ffffff;
     border: 1px solid #a8a9ad;
     box-sizing: border-box;
+}
+
+#searchAddress {
+    height: 48px;
+    width: 103px;
+    left: 694px;
+    top: 356px;
+    text-align: center;
+    color: white;
+}
+
+#join_addressDetail {
+    width: 194px;
+    top: 414px;
+}
+
+#join_addressExtra {
+    width: 194px;
+    left: 603px;
+    top: 414px;
+}
+
+#join_juminNumber {
+    top: 473px;
+}
+
+#join_recommendPatient {
+    top: 530px;
 }
 
 .btn {
@@ -51,29 +79,13 @@ img {
     border: 0;
 }
 
-#searchAddress {
-    height: 48px;
-    width: 103px;
-    left: 694px;
-    top: 385px;
-    text-align: center;
-    color: white;
-}
-
 /* 증상 입력하기 button */
 #submitInfo {
     height: 56px;
     width: 398px;
     left: 399px;
-    top: 559px;
+    top: 588px;
     text-align: center;
     color: white;
 }
 
-#join_juminNumber {
-    top: 443px;
-}
-
-#join_recommendPatient {
-    top: 501px;
-}
