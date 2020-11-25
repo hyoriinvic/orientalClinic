@@ -31,7 +31,7 @@
 
         <script>
         alert("로그인 되었습니다.");
-        location.href='/symptom1.php';
+        location.href='/symptom1-1.php';
         </script>
 
 

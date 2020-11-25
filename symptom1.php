@@ -51,7 +51,10 @@
                     drinking : $("drinking").val(),
                     smoking : $("smoking").val()
                 };
-                    
+                
+
+        
+        
         $.ajax({
             type:'POST',
             url:action,
