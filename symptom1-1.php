@@ -40,7 +40,7 @@
                 checked.push($(item).val());            
                 console.log($(item).val());
             })
-            console.log(checked);
+            console.log("form data : " + checked);
             return checked;
         }
     </script>
