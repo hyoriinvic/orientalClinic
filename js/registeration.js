@@ -31,7 +31,7 @@ let register = () => {
                 alert("회원가입 실패");
             } else {
                 alert("회원가입 성공");
-                location.href = "./main.html";
+                location.href = "./symptom1.html";
             }
         }
     });
