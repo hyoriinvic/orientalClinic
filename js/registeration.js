@@ -30,8 +30,14 @@ let register = () => {
             if (response.error === true) {
                 alert("회원가입 실패");
             } else {
-                alert("회원가입 성공");
-                location.href = "./symptom1.html";
+                if (typeof (Storage) !== "undefined") {
+                    // Store
+                    sessionStorage.setItem('join_patientName', form_data.join_patientName);
+                    sessionStorage.setItem('join_patientTel', form_data.join_patientTel);
+
+                    // alert("회원가입 성공");
+                    location.href = "./symptom1.html";
+                }
             }
         }
     });

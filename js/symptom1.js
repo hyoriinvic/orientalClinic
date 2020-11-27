@@ -2,30 +2,29 @@
 let IP = location.host;
 
 window.onload = function () {
-    // let checkbox = document.getElementById('high_blood_pressure');
+    let s1 = document.getElementById('high_blood_pressure');
+    s1.addEventListener('change', function (e) { if (s1.checked) { s1.value = "1"; } else { s1.value = "0"; } });
 
-    // checkbox.addEventListener('change', function (e) {
-    //     if (checkbox.checked) {
-    //         checkbox.value = "1";
-    //     } else {
-    //         checkbox.value = "0";
-    //     }
-    // });
+    let s2 = document.getElementById('diabetes');
+    s2.addEventListener('change', function (e) { if (s2.checked) { s2.value = "1"; } else { s2.value = "0"; } });
 
-    let btns = document.getElementsByClassName("btns");
-    var checked = []; //check 여부를 저장할 배열 (1: checked, 0: not checked)
+    let s3 = document.getElementById('hepatitis');
+    s3.addEventListener('change', function (e) { if (s3.checked) { s3.value = "1"; } else { s3.value = "0"; } });
 
-    btns.addEventListner('change', function (e))
-    $.each(btns, function (index, item) {
-        if ($(item).is(":checked")) {
-            $(item).val() = "1";
-            checked.push("1");
-        } else {
-            $(item).val() = "0";
-            checked.push("0");
-        }
-    })
-    console.log(checked); // 생성된 배열 확인
+    let s4 = document.getElementById('allergy');
+    s4.addEventListener('change', function (e) { if (s4.checked) { s4.value = "1"; } else { s4.value = "0"; } });
+
+    let s5 = document.getElementById('surgery_history');
+    s5.addEventListener('change', function (e) { if (s5.checked) { s5.value = "1"; } else { s5.value = "0"; } });
+
+    let s6 = document.getElementById('medication');
+    s6.addEventListener('change', function (e) { if (s6.checked) { s6.value = "1"; } else { s6.value = "0"; } });
+
+    let s7 = document.getElementById('drinking');
+    s7.addEventListener('change', function (e) { if (s7.checked) { s7.value = "1"; } else { s7.value = "0"; } });
+
+    let s8 = document.getElementById('smoking');
+    s8.addEventListener('change', function (e) { if (s8.checked) { s8.value = "1"; } else { s8.value = "0"; } });
 }
 
 let saveSymptom1 = () => {

@@ -27,9 +27,7 @@
         $sql = 'insert into patient_db (join_patientName, join_patientTel, join_addressSearch, join_addressDetail, join_addressExtra, join_juminNumber, join_recommendPatient)';
         $sql = $sql."values('$join_patientName', '$join_patientTel', '$join_addressSearch', '$join_addressDetail', '$join_addressExtra', '$join_juminNumber', '$join_recommendPatient')";
 
-        // $connection = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
         $result = mysqli_query($connect, $sql);
-
         echo "success.";
     
     }else{
