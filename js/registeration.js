@@ -1,34 +1,40 @@
-// AJAX를 이용해 서버에 '환자 개인 정보'를 저장
-function patientData() {
-    var patientInfo = $("#register").serialize();
+"use strict";
+let IP = location.host;
 
-    console.log(patientInfo);
-    return patientInfo;
-}
+let register = () => {
 
-function AjaxCall(method) {
-    var action = $('#register').attr('action');
+    let join_patientName = document.getElementById("join_patientName").value;
+    let join_patientTel = document.getElementById("join_patientTel").value;
+    let join_addressSearch = document.getElementById("join_addressSearch").value;
+    let join_addressDetail = document.getElementById("join_addressDetail").value;
+    let join_addressExtra = document.getElementById("join_addressExtra").value;
+    let join_juminNumber = document.getElementById("join_juminNumber").value;
+    let join_recommendPatient = document.getElementById("join_recommendPatient").value;
+
+    let form_data = {
+        join_patientName: join_patientName,
+        join_patientTel: join_patientTel,
+        join_addressSearch: join_addressSearch,
+        join_addressDetail: join_addressDetail,
+        join_addressExtra: join_addressExtra,
+        join_juminNumber: join_juminNumber,
+        join_recommendPatient: join_recommendPatient
+    };
 
     $.ajax({
-        type: 'POST',
-        url: action,
-        data: patientData(),
+        url: "http://" + IP + "/php/join.php",
+        type: "POST",
+        data: form_data,
+        dataType: "text",
         success: function (response) {
-            if (response.trim() == 'success') {
-                sessionStorage.setItem('join_patientName', patientData.join_patientName);
-                $('#msg').html('<p>회원가입 성공!</p>')
-                Headers('Location :/sympton1.php');
+            if (response.error === true) {
+                alert("회원가입 실패");
             } else {
-                $('#msg').html('<p>회원가입 실패</p>');
-                history.back();
+                alert("회원가입 성공");
+                location.href = "./main.html";
             }
-        },
-        error: function () {
-            $('#msg').html('<h2>error</h2>');
         }
     });
-}
 
-//201110_민수_AJAX를 이용한 회원가입을 registration.php에 옮겨서 구현했습니다.
-// 왜냐하면 위 기능을 살려서 가입하면 registration.js + join.php 가 중복이 되서 
-// 따블로 회원가입이 되기 때문..+ js에만 회원가입 구현기능을 하는 법을 잘 모르겠어서..입니다
+    return false;
+}

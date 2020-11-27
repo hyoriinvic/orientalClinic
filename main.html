@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT" />
+    <!-- Set no-cache -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kyung-hee Oriental Clinic</title>
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <img src="image/logo.png" alt="Kyunghee Oriental" />
+
+    <form id='loginForm' onsubmit="return login()">
+        <div><input class="info" id="join_patientName" name="join_patientName" required placeholder="  이름"
+                autocomplete='off' type="text" /></div>
+        <div><input class="info" id="join_patientTel" name="join_patientTel" required placeholder="  전화번호"
+                autocomplete='off' type="tel" /></div>
+        <div>
+            <button id="submitInfo" type="submit">증상 입력하기</button>
+        </div>
+    </form>
+    <div>
+        <span>처음 방문하셨습니까?</span>
+        <a href="./registration.html" target="_self">환자등록</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>

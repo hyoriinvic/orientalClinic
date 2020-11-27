@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Kyung-hee Oriental Clinic</title>
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/symptom1/symptom1.css" />
+
+</head>
+
+<body>
+    <img src="image/logo.png" alt="Kyunghee Oriental Clinic" />
+    <span style="color:#9D1C20">해당되는 사항</span>만 클릭해주세요.
+    <form id='symptom1Form' onsubmit="return saveSymptom1()">
+        <div class="checkbox-container">
+            <div>
+                <input type="checkbox" name="high_blood_pressure" class="btns" id="high_blood_pressure" value="0">
+                <label class="btn1" for="high_blood_pressure">고혈압</label>
+            </div>
+            <div>
+                <input type="checkbox" name='diabetes' class="btns" id="diabetes" value='1'>
+                <label class="btn1" for="diabetes">당뇨</label>
+            </div>
+            <div>
+                <input type="checkbox" name='hepatitis' class="btns" id="hepatitis" value='1'>
+                <label class="btn1" for="hepatitis">간염</label>
+            </div>
+            <div>
+                <input type="checkbox" name='allergy' class="btns" id="allergy" value='1'>
+                <label class="btn1" for="allergy">알레르기</label>
+            </div>
+            <div>
+                <input type="checkbox" name='surgery_history' class="btns" id="surgery_history" value='1'>
+                <label class="btn1" for="surgery_history">수술 이력</label>
+            </div>
+            <div>
+                <input type="checkbox" name='medication' class="btns" id="medication" value='1'>
+                <label class="btn1" for="medication">복용약</label>
+            </div>
+            <div>
+                <input type="checkbox" name='drinking' class="btns" id="drinking" value='1'>
+                <label class="btn2" for="drinking">음주</label>
+            </div>
+            <div>
+                <input type="checkbox" name='smoking' class="btns" id="smoking" value='1'>
+                <label class="btn2" for="smoking">흡연</label>
+            </div>
+        </div>
+
+        <!-- 페이지 이동 기능 잠깐 사용 X
+        <button id="submitInfo" type="button" onclick="location.href='http://127.0.0.1/sympton2.php'">제출하기</button> 
+        -->
+        <button id="submitInfo" type="submit">제출하기</button>
+
+    </form>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/symptom1.js"></script>
+</body>    
+
+</html>

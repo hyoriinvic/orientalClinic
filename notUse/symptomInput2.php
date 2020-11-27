@@ -32,7 +32,7 @@
     } else{
         echo "<script>alert(\"증상입력에 실패했습니다. 관리자에게 문의하십시오.\");</script>";
     };
-    header('location:/main.php');
-
+    session_destroy();
     mysqli_close($connect);
+    header('location:/main.php');
 ?>

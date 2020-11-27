@@ -1,6 +1,8 @@
 // 제출하기 버튼을 누를 경우,          
 $(document).ready(function () {
     $('submitInfo').click(function () {
+        isChecked(); //체크 여부에 따라, value 변경 (1: checked, 0: not checked)
+
         var action = $('submitInfo').attr('action');
         var form_data = {
             neck: $("$neck").val(), //목

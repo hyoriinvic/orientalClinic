@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="kr">
+
+<head>
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT" />
+    <!-- Set no-cache -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kyung-hee Oriental Clinic</title>
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/registration.css" />
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <image src="image/logo.png" alt="Kyunghee Oriental Clinic" />
+
+    <form id='registerForm' onsubmit="return register()">
+        <div><input class="info" id="join_patientName" name="join_patientName" required placeholder="이름" type="text"
+                required /></div>
+        <div><input class="info" id="join_patientTel" name="join_patientTel" required placeholder="전화번호" type="tel"
+                required /></div>
+        <div>
+            <input id="join_addressSearch" name="join_addressSearch" required placeholder="주소를 검색하세요." type="text" />
+            <button class="btn" id="searchAddress" onclick="sample6_execDaumPostcode()">주소 검색</button>
+        </div>
+        <div><input class="info" id="join_addressDetail" name = "join_addressDetail" required placeholder="상세 주소" type="text"/></div>
+        <div><input class="info" id="join_addressExtra" name = "join_addressExtra" required placeholder="참고 항목" type="text"/></div>
+        <div><input class="info" id="join_juminNumber" name="join_juminNumber" required placeholder="주민등록번호" type="text"
+                required pattern="[0-9]{13}" /></div>
+        <div><input class="info" id="join_recommendPatient" name="join_recommendPatient" placeholder="소개환자(선택)"
+                type="text" /></div>
+        <button class="btn" id="submitInfo" type="submit">증상 입력하기</button>
+    </form>
+    <script type="text/javascript" src="./js/searchAddress.js"></script>
+    <script type="text/javascript" src="./js/registeration.js"></script>
+
+</body>
+
+</html>

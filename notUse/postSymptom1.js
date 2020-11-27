@@ -1,6 +1,8 @@
 // 제출하기 버튼을 누를 경우,          
 $(document).ready(function () {
     $('submitInfo').click(function () {
+        isChecked();
+
         var action = $('submitInfo').attr('action');
         var form_data = {
             high_blood_pressure: $("$high_blood_pressure").val(),
