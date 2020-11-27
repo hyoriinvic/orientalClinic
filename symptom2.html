@@ -8,61 +8,8 @@
     <link rel="stylesheet" href="css/background.css" />
     <link rel="stylesheet" href="css/symptom2/symptom2.css" />
     
-    <?php
-    session_cache_expire(5); //세션이 유지될 시간을 입력합니다.
-
-    session_start();
-
-    $join_patientName	= $_SESSION['join_patientName'];   //세션에서 값을 받아옵니다.
-    $join_patientTel = $_SESSION['join_patientTel']; //세션에서 값을 받아옵니다.
-
-    if(!$join_patientName) {
-        header('location:/main.php');
-      //아이디값이 없을경우 세션이 만료되었다는 의미이므로 처리할 코드를 입력합니다.
-    }
-    ?>
-
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript"> 
-        // 제출하기 버튼을 누를 경우,          
-        $(document).ready(function(){
-            alert(sessionStorage.getItem("join_patientName"));
-            $('submitInfo').click(function(){
-                var action = $('submitInfo').attr('action');
-                var form_data = {
-                    neck : $("neck").val(),
-                    sholder : $("sholder").val(),
-                    elbow : $("elbow").val(),
-                    waist : $("waist").val(),
-                    wrist : $("wrist").val(),
-                    chest : $("chest").val(),
-                    stomach : $("stomach").val(),
-                    pelvis : $("pelvis").val(),
-                    knee : $("knee").val(),
-                    ankle : $("ankle").val(),
-                    eye : $("eye").val(),
-                    nose : $("nose").val(),
-                    mouth : $("mouth").val(),
-                    other : $("other").val()
-                };
-                    
-        $.ajax({
-            type:'POST',
-            url:action,
-            data:form_data,
-            success:function(response){
-                if(response.trim() == 'success'){
-                    $('msg').html('<p>증상입력 성공!</p>')
-                }else{
-                    $('msg').html('<p>증상입력 실패!</p>')
-                }
-            },
-            error:function(){ $('msg').html('<h2>error</h2>');}
-            });
-        });
-    });
-    </script>
 </head>
 
 <body>
@@ -191,6 +138,7 @@
         </section>
         <button id="submitInfo" class="btn submitInfo" type="submit">접수하기</button>
     </form>
+    <script src="./js/symptom2.js"></script>
 </body>
 
 </html>
