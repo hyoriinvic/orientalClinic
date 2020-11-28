@@ -29,7 +29,9 @@ window.onload = function () {
 
 let saveSymptom1 = () => {
 
-    // let patientTel = ;
+    let join_patientName = sessionStorage.getItem("join_patientName");
+    let join_patientTel = sessionStorage.getItem("join_patientTel");
+
     let high_blood_pressure = document.getElementById('high_blood_pressure').value;
     let diabetes = document.getElementById("diabetes").value;
     let hepatitis = document.getElementById("hepatitis").value;
@@ -40,6 +42,8 @@ let saveSymptom1 = () => {
     let smoking = document.getElementById("smoking").value;
 
     let form_data = {
+        join_patientName: join_patientName,
+        join_patientTel: join_patientTel,
         high_blood_pressure: high_blood_pressure,
         diabetes: diabetes,
         hepatitis: hepatitis,
@@ -49,6 +53,8 @@ let saveSymptom1 = () => {
         drinking: drinking,
         smoking: smoking
     };
+
+    console.log(form_data);
 
     $.ajax({
         url: "http://" + IP + "/php/symptom1.php",

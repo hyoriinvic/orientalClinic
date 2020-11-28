@@ -15,6 +15,10 @@
     if(isset($_POST['join_patientName']) && isset($_POST['join_patientTel']) && isset($_POST['join_addressSearch'])
         && isset($_POST['join_addressDetail']) && isset($_POST['join_addressExtra']) && isset($_POST['join_juminNumber']))
 	{
+        session_start();
+        $_SESSION['join_patientName'] = $_POST['join_patientName'];
+        $_SESSION['join_patientTel'] = $_POST['join_patientTel'];
+
         $join_patientName = $_POST['join_patientName']; //성명
         $join_patientTel = $_POST['join_patientTel']; //전화번호
         $join_addressSearch = $_POST['join_addressSearch']; //주소
