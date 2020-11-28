@@ -35,7 +35,7 @@ let register = () => {
                     sessionStorage.setItem('join_patientName', form_data.join_patientName);
                     sessionStorage.setItem('join_patientTel', form_data.join_patientTel);
 
-                    // alert("회원가입 성공");
+                    alert("회원가입 성공");
                     location.href = "./symptom1.html";
                 }
             }

@@ -63,10 +63,10 @@ let saveSymptom1 = () => {
         dataType: "text",
         success: function (response) {
             if (response.error === true) {
-                alert("정보 저장 실패");
+                alert("증상-1 저장 실패");
             } else {
-                alert("정보 저장 성공");
-                // location.href = "./symptom2.html";
+                alert("증상-1 저장 성공");
+                location.href = "./symptom2.html";
             }
         }
     });

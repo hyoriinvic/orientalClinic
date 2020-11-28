@@ -54,4 +54,5 @@
         // echo "check post values.";
     }
         mysqli_close($connect);
+        session_destroy();
 ?>
