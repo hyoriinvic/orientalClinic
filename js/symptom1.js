@@ -60,7 +60,7 @@ let saveSymptom1 = () => {
                 alert("정보 저장 실패");
             } else {
                 alert("정보 저장 성공");
-                location.href = "./symptom2.html";
+                // location.href = "./symptom2.html";
             }
         }
     });

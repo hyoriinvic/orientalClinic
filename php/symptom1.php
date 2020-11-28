@@ -27,16 +27,16 @@
         $medication = $_POST['medication']; //복용약
         $drinking = $_POST['drinking']; //음주
         $smoking = $_POST['smoking']; //흡연
-        
+
         $sql = "UPDATE patient_db SET 
-            high_blood_pressure = '$high_blood_pressure',
-            diabetes  = '$diabetes',
-            hepatitis = '$hepatitis',
-            allergy = '$allergy',
-            surgery_history = '$surgery_history',
-            medication = '$medication',
-            drinking = '$drinking',
-            smoking = '$smoking' 
+            `high_blood_pressure` = '$high_blood_pressure',
+            `diabetes`  = '$diabetes',
+            `hepatitis` = '$hepatitis',
+            `allergy` = '$allergy',
+            `surgery_history` = '$surgery_history',
+            `medication` = '$medication',
+            `drinking` = '$drinking',
+            `smoking` = '$smoking' 
             WHERE join_patientName = '$join_patientName' AND join_patientTel = '$join_patientTel'";
 
         $result = mysqli_query($connect, $sql);
@@ -46,7 +46,7 @@
     }else{
         echo "check post values.";
     }
-
+        mysqli_close($connect);
 ?>
 
 
