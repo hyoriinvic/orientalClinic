@@ -13,7 +13,6 @@
         die("Connect Error: ".$connect -> connect_error);
     }
 
-
     if(isset($_POST['join_patientName']) && isset($_POST['join_patientTel'])){
     
         $join_patientName = $_POST['join_patientName'];
@@ -22,7 +21,6 @@
         $query = "SELECT * FROM patient_db WHERE join_patientName = '$join_patientName' AND join_patientTel = '$join_patientTel'";
         
         $result = mysqli_query($connect,$query);
-
         $row = mysqli_fetch_array($result);
 
         if($join_patientName === $row['join_patientName'] && $join_patientTel === $row['join_patientTel'])

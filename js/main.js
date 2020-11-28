@@ -16,16 +16,16 @@ let login = () => {
         data: form_data,
         dataType: "text",
         success: function (response) {
-            if (response) {
-                if (typeof (Storage) !== "undefined") {
-                    // Store
-                    sessionStorage.setItem('join_patientName', form_data.join_patientName);
-                    sessionStorage.setItem('join_patientTel', form_data.join_patientTel);
-                    location.href = "./symptom1.html";
-                }
+            if (response.trim() == 'success') {
+                sessionStorage.setItem('join_patientName', form_data.join_patientName);
+                sessionStorage.setItem('join_patientTel', form_data.join_patientTel);
+                $('#msg').html('<p>로그인성공!</p>')
             } else {
-                alert("정보를 잘못입력하였습니다. 처음 방문하셨으면, 등록을 진행해주세요.");
+                $('#msg').html('<p>로그인실패!</p>');
             }
+        },
+        error: function () {
+            $('#msg').html('<h2>error</h2>');
         }
     });
 
