@@ -63,6 +63,7 @@ let saveSymptom2 = () => {
     let knee = document.getElementById("knee").value;
     let ankle = document.getElementById("ankle").value;
     let eye = document.getElementById("eye").value;
+    let ear = document.getElementById("ear").value;
     let nose = document.getElementById("nose").value;
     let mouth = document.getElementById("mouth").value;
     let other = document.getElementById("other").value;
@@ -81,6 +82,7 @@ let saveSymptom2 = () => {
         knee: knee,
         ankle: ankle,
         eye: eye,
+        ear: ear,
         nose: nose,
         mouth: mouth,
         other: other

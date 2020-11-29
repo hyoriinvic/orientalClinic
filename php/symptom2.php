@@ -14,7 +14,7 @@
 
     if(isset($_POST['neck']) && isset($_POST['sholder']) && isset($_POST['elbow']) && isset($_POST['waist'])
     && isset($_POST['wrist']) && isset($_POST['chest']) && isset($_POST['stomach']) && isset($_POST['pelvis'])
-    && isset($_POST['knee']) && isset($_POST['ankle']) && isset($_POST['eye']) && isset($_POST['nose']) 
+    && isset($_POST['knee']) && isset($_POST['ankle']) && isset($_POST['eye']) && isset($_POST['ear'])  && isset($_POST['nose']) 
     && isset($_POST['mouth']) && isset($_POST['other']))
 	{   
         session_start();
@@ -37,14 +37,15 @@
         $knee = $_POST['knee'];
         $ankle = $_POST['ankle'];
         $eye = $_POST['eye'];
+        $ear = $_POST['ear'];
         $nose = $_POST['nose'];
         $mouth = $_POST['mouth'];
         $other = $_POST['other'];
         
 
         $sql_new = "INSERT INTO patient_symptom2 
-        (join_patientName, join_patientTel, neck, sholder, elbow, waist, wrist, chest, stomach, pelvis, knee, ankle, eye, nose, mouth, other)";
-        $sql_new = $sql_new."values('$join_patientName', '$join_patientTel', '$neck', '$sholder', '$elbow', '$waist', '$wrist', '$chest', '$stomach', '$pelvis', '$knee', '$ankle', '$eye', '$nose', '$mouth', '$other')";
+        (join_patientName, join_patientTel, neck, sholder, elbow, waist, wrist, chest, stomach, pelvis, knee, ankle, eye, ear, nose, mouth, other)";
+        $sql_new = $sql_new."values('$join_patientName', '$join_patientTel', '$neck', '$sholder', '$elbow', '$waist', '$wrist', '$chest', '$stomach', '$pelvis', '$knee', '$ankle', '$eye', '$ear', '$nose', '$mouth', '$other')";
 
         $result_new = mysqli_query($connect, $sql_new);
 
