@@ -6,20 +6,25 @@
     
     include './config.php';
 
-    $connect = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-    if($connect -> connect_errno){
-        die("Connect Error: ".$connect -> connect_error);
-    }
-
-    if(isset($_POST['neck']) && isset($_POST['sholder']) && isset($_POST['elbow']) && isset($_POST['waist'])
-    && isset($_POST['wrist']) && isset($_POST['chest']) && isset($_POST['stomach']) && isset($_POST['pelvis'])
-    && isset($_POST['knee']) && isset($_POST['ankle']) && isset($_POST['eye']) && isset($_POST['ear'])  && isset($_POST['nose']) 
-    && isset($_POST['mouth']) && isset($_POST['other']))
+    if(isset($_POST['neck'], 
+    $_POST['sholder'],
+    $_POST['elbow'],
+    $_POST['waist'],
+    $_POST['wrist'], 
+    $_POST['chest'], 
+    $_POST['stomach'],
+    $_POST['pelvis'],
+    $_POST['knee'],
+    $_POST['ankle'],
+    $_POST['eye'],
+    $_POST['ear'],
+    $_POST['nose'],
+    $_POST['mouth'],
+    $_POST['other']))
 	{   
         session_start();
         
-        if(isset($_SESSION['join_patientName']) && isset($_SESSION['join_patientTel'])){
+        if(isset($_SESSION['join_patientName'],$_SESSION['join_patientTel'])){
             $join_patientName = $_SESSION['join_patientName'];
             $join_patientTel = $_SESSION['join_patientTel'];
         } else {
@@ -42,18 +47,36 @@
         $mouth = $_POST['mouth'];
         $other = $_POST['other'];
         
+        $sql = "UPDATE patient_db SET 
+        neck = '$neck',
+        sholder = '$sholder',
+        elbow = '$elbow',
+        waist = '$waist',
+        wrist = '$wrist',
+        chest = '$chest',
+        stomach = '$stomach',
+        pelvis = '$pelvis',
+        knee = '$knee',
+        ankle = '$ankle',
+        eye = '$eye',
+        ear = '$ear',
+        nose = '$nose',
+        mouth = '$mouth',
+        other = '$other'
+        WHERE join_patientName = '$join_patientName' AND join_patientTel = '$join_patientTel'";
 
-        $sql_new = "INSERT INTO patient_symptom2 
-        (join_patientName, join_patientTel, neck, sholder, elbow, waist, wrist, chest, stomach, pelvis, knee, ankle, eye, ear, nose, mouth, other)";
-        $sql_new = $sql_new."values('$join_patientName', '$join_patientTel', '$neck', '$sholder', '$elbow', '$waist', '$wrist', '$chest', '$stomach', '$pelvis', '$knee', '$ankle', '$eye', '$ear', '$nose', '$mouth', '$other')";
+//'INSERT INTO patient_db (high_blood_pressure, diabetes, hepatitis, allergy, surgery_history, medication, drinking, smoking)';
+//$sql = $sql."values('$high_blood_pressure', '$diabetes', '$hepatitis', '$allergy', '$surgery_history', '$medication', '$drinking', '$smoking')";
 
-        $result_new = mysqli_query($connect, $sql_new);
+$connection = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+$result = mysqli_query($connection, $sql);
 
-        // echo "success.";
-    
-    }else{
-        // echo "check post values.";
-    }
-        mysqli_close($connect);
-        session_destroy();
+echo "success.";
+
+}else{
+echo "check post values.";
+}
+
+
+
 ?>

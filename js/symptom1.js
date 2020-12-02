@@ -54,8 +54,6 @@ let saveSymptom1 = () => {
         smoking: smoking
     };
 
-    console.log(form_data);
-
     $.ajax({
         url: "http://" + IP + "/php/symptom1.php",
         type: "POST",

@@ -44,6 +44,9 @@ window.onload = function () {
     let s14 = document.getElementById('other');
     s14.addEventListener('change', function (e) { if (s14.checked) { s14.value = "1"; } else { s14.value = "0"; } });
 
+    let s15 = document.getElementById('ear');
+    s15.addEventListener('change', function (e) { if (s15.checked) { s15.value = "1"; } else { s15.value = "0"; } });
+
 
 }
 
@@ -99,7 +102,8 @@ let saveSymptom2 = () => {
             if (response.error === true) {
                 alert("증상-2 저장 실패");
             } else {
-                alert("증상-2 저장 성공");
+                alert("진료가 접수되었습니다.");
+                location.href ="./main.html";
             }
         }
     });
